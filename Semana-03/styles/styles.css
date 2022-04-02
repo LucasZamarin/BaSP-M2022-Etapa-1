@@ -1,15 +1,88 @@
 *{
     color: rgb(55, 56, 103);
+    font-family: "Sofia", sans-serif;
 }
 
+h1{
+    font-weight: bold;
+}
 
+#section-1{
+    width: 60%;
+}
 
-hr{
-width: 1110px;
-height: 0px;
-left: 165px;
-top: 122.08px;
+.images-top{
+    display: inline-block;
+    width: 13%;
+    padding-left: 10%;
+}
 
-border: 1px solid #AACE9B;
-transform: rotate(-0.11deg);
+.button-1{
+    color: #AACE9B;
+    padding: 14px 36px;
+    font-weight: bold;
+    left: 22.22%;
+    right: 66.67%;
+    top: 16.21%;
+    bottom: 82.26%;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+input{
+    padding: 10px 12px;
+    padding-bottom: 15px;
+    left: 0%;
+    right: 51.35%;
+    top: 17.43%;
+    bottom: 22.68%;
+    width: 40%;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+select{
+    padding: 10px 12px;
+    padding-bottom: 15px;
+    left: 0%;
+    right: 51.35%;
+    top: 17.43%;
+    bottom: 22.68%;
+    width: 40%;
+    border: 1px solid #373867;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+textarea{
+    left: 100%;
+    right: 100%;
+    top: 19.83%;
+    bottom: 0%;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.button-2{
+    padding: 14px 36px;
+    width: 160px;
+    height: 60px;
+    left: 0px;
+    top: 16px;
+    background: #AACE9B;
+    border-radius: 5px;
+}
+
+.barra-1{
+    width: 1110px;
+    height: 0px;
+    left: 165px;
+    top: 122.08px;
+
+    border: 1px solid #AACE9B;
+    transform: rotate(-0.11deg);
 }
