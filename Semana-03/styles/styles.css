@@ -10,17 +10,29 @@ aside {
     color: black;
 }
 
+aside{
+    position:fixed;
+    width: 308px;
+}
+
+header, section, footer, hr {
+    margin-right: 10px;
+    margin-left: auto;
+   width: 1110px;
+}
+
 i {
     color: #AACE9B;
 }
 
 h1 {
     font-weight: bold;
+    margin-right: 600px;
 }
 
 .articles-1 {
     display: inline-block;
-    width: 23%;
+    width: 40%;
 }
 
 .articles-2 {
@@ -32,11 +44,84 @@ h1 {
     width: 60%;
 }
 
+.features-span{
+    display: inline-block;
+    width: 40%;
+}
+
+.first-block{
+     display: inline-block;
+    width: 42%;
+}
+
 .images-top {
     display: inline-block;
-    width: 13%;
+    margin: 10px;
+}
 
-    margin-left: 2%;
+.top-header{
+    display: inline-block;
+
+}
+
+.rombo {
+    width: 100px; 
+    position: relative;
+    bottom: 100px;
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-image: url("../images/reloj1.png");
+}
+
+.rombo-2 {
+    width: 100px; 
+    position: relative;
+    bottom: 100px;
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-image: url("../images/roles1.png");
+}
+
+.rombo-3 {
+    width: 100px; 
+    position: relative;
+    bottom: 100px;
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-image: url("../images/reports1.png");
+}
+
+.rombo-4 {
+    width: 100px; 
+    position: relative;
+    bottom: 100px;
+    height: 100px; 
+    border: 3px solid #555; 
+    background: #428bca;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-image: url("../images/gestion1.jpg");
 }
 
 .button-1 {
@@ -101,11 +186,34 @@ textarea {
     border-radius: 5px;
 }
 
-.images-bottom {
-    height: 350px;
-    max-width: 50%;
+.last-div{
+    display: inline-block;
+    
 }
 
+.last-paragraph{
+    display: inline-block;
+    width: 60%;
+}
+
+.second-paragraph{
+    display: inline-block;
+    width: 60%;
+}
+
+.span-why{
+    display: inline-block;
+    
+}
+
+.div-why{
+    border-right: solid 3px black;
+}
+
+#span-textarea{
+    display: block;
+    margin-top: 15px;
+}
 
 .barra-1 {
     width: 100%;
@@ -113,8 +221,13 @@ textarea {
     background-color: #AACE9B;
     left: 165px;
     top: 122.08px;
-    border: 1px solid #AACE9B;
+    border-bottom: 1px solid #AACE9B;
     transform: rotate(-0.11deg);
+}
+
+.last-list{
+    display: inline-block;
+
 }
 
 footer,
