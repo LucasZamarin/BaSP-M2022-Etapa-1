@@ -34,6 +34,7 @@ a {
 
 .sidebar-text {
     color: rgb(55, 56, 103);
+    margin-bottom: 10px; 
 }
 
 .sidebar-span {
@@ -49,7 +50,7 @@ a {
 
 .div-aside {
     border-bottom: solid 1px #c4c4c4;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     margin-top: 10px;
 }
 
