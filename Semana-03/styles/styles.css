@@ -79,7 +79,10 @@ h2 {
 }
 
 .section-head {
-    width: 75%;
+    margin-right: 10px;
+    margin-left: auto;
+    width: 1110px;
+
 }
 
 .articles-features {
