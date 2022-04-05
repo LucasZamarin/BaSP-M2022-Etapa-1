@@ -28,23 +28,24 @@ a {
     color: rgb(55, 56, 103);
 }
 
-.sidebar-texto {
+.sidebar-text-lorem {
     color: rgb(55, 56, 103);
 }
 
 .sidebar-text {
     color: rgb(55, 56, 103);
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .sidebar-span {
     margin-left: 20px;
+    text-align: right;
 }
 
 .sidebar-head {
     color: rgb(55, 56, 103);
     font-size: 180%;
-    border-bottom: solid 7px #AACE9B;
+    border-bottom: solid 5px #AACE9B;
     font-weight: bold;
 }
 
@@ -58,7 +59,7 @@ i {
     color: #AACE9B;
 }
 
-.first-block {
+.head-block {
     display: inline-block;
     width: 35%;
 }
@@ -68,28 +69,31 @@ h1 {
     margin-right: 600px;
 }
 
+h2 {
+    font-size: 200%;
+}
+
 .images-top {
     display: inline-block;
     margin: 10px;
 }
 
-#section-1 {
+.section-head {
     width: 75%;
 }
 
-.articles-1 {
+.articles-features {
     display: inline-block;
     width: 40%;
+    margin-left: 80px;
 }
 
-
-
-.barra-1 {
+.green-bar {
     width: 100%;
-    height: 2.08px;
+    height: 2px;
     background-color: #AACE9B;
     left: 165px;
-    top: 122.08px;
+    top: 122px;
     border-bottom: 1px solid #AACE9B;
     transform: rotate(-0.11deg);
 }
@@ -101,10 +105,13 @@ h1 {
 
 .top-header {
     display: inline-block;
-
 }
 
-.button-1 {
+.leadership {
+    margin-top: 3px;
+}
+
+.button-learn-more {
     color: #AACE9B;
     padding: 14px 36px;
     font-weight: bold;
@@ -119,13 +126,13 @@ h1 {
     border-radius: 5px;
 }
 
-.rombo {
+.rhombus-hour-tracking {
     width: 100px;
     position: relative;
     bottom: 100px;
     height: 100px;
     border: 3px solid #555;
-    background: #428bca;
+    background: white;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -134,13 +141,13 @@ h1 {
     background-image: url("../images/reloj1.png");
 }
 
-.rombo-2 {
+.rhombus-multiple-roles {
     width: 100px;
     position: relative;
     bottom: 100px;
     height: 100px;
     border: 3px solid #555;
-    background: #428bca;
+    background: white;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -149,13 +156,13 @@ h1 {
     background-image: url("../images/roles1.png");
 }
 
-.rombo-3 {
+.rhombus-reports {
     width: 100px;
     position: relative;
     bottom: 100px;
     height: 100px;
     border: 3px solid #555;
-    background: #428bca;
+    background: white;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -164,7 +171,7 @@ h1 {
     background-image: url("../images/reports1.png");
 }
 
-.rombo-4 {
+.rhombus-resources {
     width: 100px;
     position: relative;
     bottom: 100px;
@@ -179,7 +186,7 @@ h1 {
     background-image: url("../images/gestion1.jpg");
 }
 
-.articles-2 {
+.articles-why {
     display: inline-block;
     width: 24%;
 }
@@ -226,12 +233,12 @@ textarea {
     border-radius: 4px;
 }
 
-#span-textarea {
+.span-textarea {
     display: block;
     margin-top: 15px;
 }
 
-.button-2 {
+.button-green {
     font-weight: bold;
     color: rgb(55, 56, 103);
     width: 160px;
@@ -240,9 +247,10 @@ textarea {
     top: 16px;
     background: #AACE9B;
     border-radius: 5px;
+    margin-right: 30px;
 }
 
-.second-paragraph {
+.crucial-paragraph {
     display: inline-block;
     width: 60%;
 }
@@ -257,7 +265,7 @@ textarea {
 }
 
 .div-why {
-    border-right: solid 3px black;
+    border-right: solid 2px black;
 }
 
 .last-list {
