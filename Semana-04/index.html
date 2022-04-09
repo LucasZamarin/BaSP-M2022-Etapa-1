@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5c447739a7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/aside.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto">
     <title>Index.html</title>
 </head>
@@ -49,27 +53,30 @@
     </aside>
 
     <header>
-        <span>
-            <img class="menu" width=30px height=30px src="images/menu.png">
-        </span>
-        <div>
-            <span class="top-header">
+        <div class="container-title">
+            <span>
+                <img class="menu" width=30px height=30px src="images/menu.png">
+            </span>
+            <span class="top-header1">
                 <h1>Trackgenix</h1>
             </span>
-            <span class="top-header">
-                <ul>
-                    <li class="images-top">
-                        <img src="images/linkedin-log.png">
-                    </li>
-                    <li class="images-top"><img src="images/Twitter-logo.png">
-                    </li>
-                    <li class="images-top"><img src="images/facebook-logo-3-1.png">
-                    </li>
-                    <li class="images-top"><img src="images/instagram-logo.png">
-                    </li>
-                </ul>
-            </span>
         </div>
+        <nav class="top-header">
+            <ul>
+                <li class="images-top">
+                    <img src="images/linkedin-log.png">
+                </li>
+                <li class="images-top">
+                    <img src="images/Twitter-logo.png">
+                </li>
+                <li class="images-top">
+                    <img src="images/facebook-logo-3-1.png">
+                </li>
+                <li class="images-top">
+                    <img src="images/instagram-logo.png">
+                </li>
+            </ul>
+        </nav>
     </header>
     <section class="section-head">
         <hr class="green-bar">
@@ -83,14 +90,13 @@
             </p>
             <button class="button-learn-more">LEARN MORE</button>
         </span>
-        <span>
-            <img height=372 width=570 src="images/img2.jpg">
+        <span class="container">
+            <img height=100% width=100% src="images/img2.jpg">
         </span>
     </section>
 
     <hr>
-    <section>
-
+    <section class="Features">
         <article class="articles-features">
             <h3>Features</h3>
             <div>
@@ -152,8 +158,10 @@
                 </span>
             </div>
         </article>
-        <hr>
 
+    </section>
+    <hr>
+    <section class="why-choose-us">
         <h3>Why Choose us?</h3>
         <article class="articles-why">
             <div class="div-why">
@@ -216,7 +224,7 @@
 
     </section>
     <hr>
-    <section>
+    <section class="Contact">
         <h3>Contact</h3>
         <form>
             <input type="text" name="Name" placeholder="Name">
@@ -229,7 +237,7 @@
             </select>
 
 
-            <span class="span-textarea"><textarea rows="6" cols="100">Enter your message</textarea></span>
+            <span class="span-textarea"><textarea rows="3" cols="10">Enter your message</textarea></span>
 
         </form>
 
@@ -241,7 +249,7 @@
 
     <hr>
 
-    <section>
+    <section class="Our-history">
         <h3>Our History</h3>
         <div>
             <h4>Our Beginnings</h4>
@@ -294,7 +302,7 @@
                 Maecenas vel diam sed felis dictum sollicitudin sed ac dui. Nullam ultricies nulla lacus, id semper nibh
                 dictum
                 et.</p>
-            <img width=351 height=145 src="images/crucial-moments2.jpg">
+            <img width=100% height=145 src="images/crucial-moments2.jpg">
         </div>
     </section>
     <hr>
