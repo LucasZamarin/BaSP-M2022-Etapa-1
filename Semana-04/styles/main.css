@@ -1,0 +1,29 @@
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+
+.section-head {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 00px;
+}
+
+h2 {
+    max-width: 50%;
+}
+
+h3 {
+    max-width: 50%;
+}
+
+p {
+    max-width: 100%;
+}
+
+
+
+.span-textarea{
+    display: flex;
+}
