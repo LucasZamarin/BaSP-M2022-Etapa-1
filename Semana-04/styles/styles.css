@@ -8,13 +8,8 @@
 body {
     color: rgb(55, 56, 103);
     padding: 0;
-    margin: 0;
-    width: 100%
-}
-
-aside {
-    color: black;
-    display: none;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .green-bar {
@@ -55,7 +50,4 @@ aside {
     border-radius: 5px;
 }
 
-p {
-    display: flex;
-    width: 100%;
-}
+
