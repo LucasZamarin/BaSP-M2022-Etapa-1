@@ -98,10 +98,23 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
+    aside.sidebar {
+      display: block;
+      position: absolute;
+    }
+    
     header, .section-head {
       margin: 0 10px 0 290px;
     }
-    
+
+    .head-block>h2{
+        font-size: 40px;
+    }
+
+    .head-block>h3{
+        font-size: 20px;
+    }
+
     .top-header {
             margin-right: 80px;
     }
@@ -109,10 +122,6 @@ body {
     .bar-separator {
         margin-left: 290px;
     }
-
-    aside.sidebar {
-      display: block;
-      position: absolute;
-    }
+    
   }
   
