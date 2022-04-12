@@ -50,4 +50,69 @@ body {
     border-radius: 5px;
 }
 
+@media(min-width: 440px){
+    body{
+        margin-right: 45px;
+        margin-left: 45px;}
 
+        .first-image {
+            width: 350px;
+        }
+        
+    }
+
+@media(min-width: 768px){
+    body{
+        margin-right: 19px;
+        margin-left: 19px;}
+    
+    .first-image{
+            width: 538px;
+        }
+
+    .articles-blackline {
+        border-right: 2px solid black;
+    }
+
+}
+
+@media(min-width: 1440px){
+    
+    body{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    main img {
+        width: 255px;
+    }
+
+    .first-image{
+        width: 538px;
+    }
+
+    .articles-blackline2 {
+        border-right: 2px solid black;
+    }
+   
+}
+
+@media only screen and (min-width: 1440px) {
+    header, .section-head {
+      margin: 0 10px 0 290px;
+    }
+    
+    .top-header {
+            margin-right: 80px;
+    }
+    
+    .bar-separator {
+        margin-left: 290px;
+    }
+
+    aside.sidebar {
+      display: block;
+      position: absolute;
+    }
+  }
+  
