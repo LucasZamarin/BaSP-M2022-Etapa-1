@@ -19,3 +19,13 @@ The html page was made in Visual Studio Code following the async material provid
 This project is part of the weekly assignment #3 of the BaSP-2022 course. It consists of a creation of a styles folder, which contains both the styles.css and reset.css files. The styles.css file contains the stylizing and design presentation for the index.html file.
 
 The css styling was made in Visual Studio Code following the async material provided to us.
+
+## Week 04
+
+This project is part of the weekly assignment #4 of the BaSP-2022 course. It consists of the creation of multiple styling files to apply css properties to our index.html, divided by sections. This is our first approach to Flexbox and how to use it.
+
+The css styling was made in Visual Studio Code following the async material provided to us.
+
+## Contact info
+
+Lucas Zamarín, email: zamaorigin@gmail.com
