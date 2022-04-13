@@ -12,63 +12,27 @@ body {
     margin-left: 20px;
 }
 
-.green-bar {
-    width: 100%;
-    height: 2px;
-    background-color: #AACE9B;
-    left: 165px;
-    top: 122px;
-    border-bottom: 1px solid #AACE9B;
-    transform: rotate(-0.11deg);
-}
-
-
-.button-green {
-    font-weight: bold;
-    color: rgb(55, 56, 103);
-    width: 160px;
-    height: 60px;
-    left: 0px;
-    top: 16px;
-    background: #AACE9B;
-    border-radius: 5px;
-    margin-right: 30px;
-}
-
-.button-learn-more {
-    color: #AACE9B;
-    padding: 14px 36px;
-    font-weight: bold;
-    left: 22.22%;
-    right: 66.67%;
-    top: 16.21%;
-    bottom: 82.26%;
-    background: #FFFFFF;
-    align-items: center;
-    border: 3px solid #AACE9B;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-@media(min-width: 440px){
-    body{
+@media(min-width: 440px) {
+    body {
         margin-right: 45px;
-        margin-left: 45px;}
-
-        .first-image {
-            width: 350px;
-        }
-        
+        margin-left: 45px;
     }
 
-@media(min-width: 768px){
-    body{
+    .first-image {
+        width: 350px;
+    }
+
+}
+
+@media(min-width: 768px) {
+    body {
         margin-right: 19px;
-        margin-left: 19px;}
-    
-    .first-image{
-            width: 538px;
-        }
+        margin-left: 19px;
+    }
+
+    .first-image {
+        width: 538px;
+    }
 
     .articles-blackline {
         border-right: 2px solid black;
@@ -76,52 +40,52 @@ body {
 
 }
 
-@media(min-width: 1440px){
-    
-    body{
+@media(min-width: 1440px) {
+
+    body {
         margin-right: 20px;
         margin-left: 20px;
     }
-    
+
     main img {
         width: 255px;
     }
 
-    .first-image{
+    .first-image {
         width: 538px;
     }
 
     .articles-blackline2 {
         border-right: 2px solid black;
     }
-   
+
 }
 
 @media only screen and (min-width: 1440px) {
     aside.sidebar {
-      display: block;
-      position: absolute;
-    }
-    
-    header, .section-head {
-      margin: 0 10px 0 290px;
+        display: block;
+        position: absolute;
     }
 
-    .head-block>h2{
+    header,
+    .section-head {
+        margin: 0 10px 0 290px;
+    }
+
+    .head-block>h2 {
         font-size: 40px;
     }
 
-    .head-block>h3{
+    .head-block>h3 {
         font-size: 20px;
     }
 
     .top-header {
-            margin-right: 80px;
+        margin-right: 80px;
     }
-    
+
     .bar-separator {
         margin-left: 290px;
     }
-    
-  }
-  
+
+}
