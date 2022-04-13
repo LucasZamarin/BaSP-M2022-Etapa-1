@@ -56,7 +56,7 @@ ol>li {
     text-align: center;
 }
 
-ol>h3{
+ol>h3 {
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -74,14 +74,24 @@ li>a {
     margin-right: 30px;
 }
 
-.father-container{
+.green-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #AACE9B;
+    left: 165px;
+    top: 122px;
+    border-bottom: 1px solid #AACE9B;
+    transform: rotate(-0.11deg);
+}
+
+.father-container {
     display: flex;
     flex-wrap: wrap-reverse;
     text-align: center;
 }
 
 .head-block {
-    width: 330px;
+    width: 320px;
     margin-right: 20px;
 }
 
@@ -95,9 +105,7 @@ li>a {
 }
 
 .img-container {
-    /* display: inline-block; */
     margin: 15px;
-    /* margin: 50px; */
     width: 94.19px;
     height: 94.19px;
     overflow: hidden;
@@ -105,7 +113,7 @@ li>a {
     border-radius: 3px;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.5)
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.5);
   }
 
 .img-container img {
@@ -151,8 +159,6 @@ li>a {
     max-width: 350px;
 }
 
-
-
 .features-div{
     margin-top: 30px;
     
@@ -170,17 +176,10 @@ li>a {
     text-align: center;
     justify-content: center;
     width: 350px;
-    
 }
 
 .leadership{
     font-size: 19px;
-}
-
-.img-properties {
-    /* display: flex;
-    flex-wrap: wrap;
-    margin: auto; */
 }
 
 .inside-properties {
@@ -209,6 +208,34 @@ li>a {
     display: flex;
 }
 
+
+.button-green {
+    font-weight: bold;
+    color: rgb(55, 56, 103);
+    width: 140px;
+    height: 60px;
+    left: 0px;
+    top: 16px;
+    background: #AACE9B;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.button-learn-more {
+    color: #AACE9B;
+    padding: 14px 36px;
+    font-weight: bold;
+    left: 22.22%;
+    right: 66.67%;
+    top: 16.21%;
+    bottom: 82.26%;
+    background: #FFFFFF;
+    align-items: center;
+    border: 3px solid #AACE9B;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
 .Our-history>h3 {
     font-size: 25px;
     margin-bottom: 20px;
@@ -223,55 +250,44 @@ li>a {
 .general-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+.crucial-container {
+    width: 350px;
+    flex-grow: 1;
+    margin-left: 5%;
+    text-align: center; 
+    justify-content: space-around;
+    margin-top: 10px;
+}   
 
+.last-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.crucial-paragraph {
+    padding-top: 10px;
+}
 
 .crucial-container {
-    /* float: left;
-    margin-right: 20px; 
-    margin-bottom: 20px;
-    overflow: auto; */
-    
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
-    flex-grow: 1;
+    flex-grow: 3;
     align-self: center;
 }
 
-.last-container {
-    /* margin-right: 20px;
-    display: inline;
-    flex-wrap: wrap; */
-    /* float: right; */
-    
-    /* display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: center; */
-    
-    /* display: inline;
-    flex-wrap: wrap-reverse;
-    width: 20%; */
-} 
-
-.last-cont {
-    /* width: 100%;
-    display: flex;
-    flex-wrap: wrap; */
-}
-
 .last-paragraph {  
-  
+  width: 100%;
 }
 
 .last-div {
-    /* display: flex;
-    flex-wrap: wrap-reverse;
-    vertical-align: middle;
-    justify-content: space-between; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 15px;
 }
 
 .last-list {
@@ -280,8 +296,15 @@ li>a {
     align-items: center;
     text-align: center;
     list-style-position: inside;
+    width: 350px;
+    margin: auto;
 }
 
+.section-bottom {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
 
     
