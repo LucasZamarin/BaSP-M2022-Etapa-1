@@ -26,6 +26,14 @@ This project is part of the weekly assignment #4 of the BaSP-2022 course. It con
 
 The css styling was made in Visual Studio Code following the async material provided to us.
 
+## Week 05
+
+This project is part of the weekly assignment #4 of the BaSP-2022 course. It consists of solving a series of Javascript exercises. We also have to fix the things that were wrong with our design of the webpage made in CSS.
+
+The following is the link to the index.html file of the webpage designed in week 04: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html 
+
+The following is the link to the index.html file of the Javascript exercises of the week 05: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
 ## Contact info
 
 Lucas Zamarín, email: zamaorigin@gmail.com
