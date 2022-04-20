@@ -5,7 +5,7 @@ console.log('EXERCISE 3: ARRAYS');
 
 console.log('Exercise 3.a:');
 
-const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 console.log(months[5]);
 console.log(months[11]);
 
@@ -20,15 +20,16 @@ console.log(months.sort());
 
 console.log('Exercise 3.c:');
 
-console.log(months.unshift("January"));
-console.log(months.push("December"));
+months.unshift('Beginning');
+months.push('End');
+console.log(months);
 
 // d. Quitar un elemento del principio y del final del array (utilizar shift y pop).
 
 console.log('Exercise 3.d:');
-
-console.log(months.shift("January"));
-console.log(months.pop("December"));
+months.shift('Beginning');
+months.pop('End');
+console.log(months);
 
 // e. Invertir el orden del array (utilizar reverse).
 
@@ -40,11 +41,11 @@ console.log(months.reverse());
 
 console.log('Exercise 3.f:');
 
-console.log(months.join("-"));
+console.log(months.join('-'));
 
 // g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 
 console.log('Exercise 3.g:');
 
-var monthsArray = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+var monthsArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 console.log(monthsArray.slice(4, 11));
