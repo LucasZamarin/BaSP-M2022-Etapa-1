@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
@@ -48,7 +49,7 @@ select {
 }
 
 ol>h3 {
-    text-align:center;
+    text-align: center;
 }
 
 ol>li {
@@ -72,6 +73,7 @@ li>a {
     flex-direction: column;
     padding-left: 30px;
     margin-right: 30px;
+    margin-left: auto;
 }
 
 .green-bar {
@@ -84,24 +86,31 @@ li>a {
     transform: rotate(-0.11deg);
 }
 
+.first-image {
+    width: 350px;
+}
+
 .father-container {
     display: flex;
     flex-wrap: wrap-reverse;
     text-align: center;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 200px;
 }
 
 .head-block {
-    width: 320px;
+    width: 370px;
     margin-right: 20px;
 }
 
-.button-learn-more{
+.button-learn-more {
     display: flex;
     width: 154px;
     height: 56px;
     margin-top: 20px;
     margin-bottom: 25px;
-    margin-left: 115px;
+    margin-left: 25%;
 }
 
 .img-container {
@@ -114,7 +123,7 @@ li>a {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.5);
-  }
+}
 
 .img-container img {
     position: relative;
@@ -123,16 +132,18 @@ li>a {
     width: 141%;
     height: 141%;
     transform: rotate(-45deg);
-  }
+}
 
-.features{
+.bar-separator {
+    margin-left: auto;
+}
+
+.features {
     margin-top: 40px;
     margin-bottom: 40px;
-    width: 100%;
 }
 
 .features-container {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -150,7 +161,7 @@ li>a {
     margin-bottom: 10px;
 }
 
-.articles-features{
+.articles-features {
     display: flex;
     padding: 10px;
     flex-wrap: wrap;
@@ -159,43 +170,49 @@ li>a {
     max-width: 350px;
 }
 
-.features-div{
+.features-div {
     margin-top: 30px;
-    
+}
+
+.h3-prop {
+    text-align: center;
+    margin-left: auto;
+    width: 100%;
 }
 
 .properties {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
 }
 
-.articles-properties{
+.articles-properties {
     margin-top: 20px;
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
-    width: 350px;
+    width: 250px;
 }
 
-.leadership{
+.leadership {
     font-size: 19px;
 }
 
 .inside-properties {
-    display: flex;
-    flex-wrap: wrap;
-    width: 350px;
+    justify-content: center;
     text-align: center;
     margin-bottom: 20px;
+    margin-right: none;
 }
 
-.inside-properties h4{
+.inside-properties h4 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-.inside-properties>p{
+.inside-properties>p {
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -207,7 +224,6 @@ li>a {
 .span-textarea {
     display: flex;
 }
-
 
 .button-green {
     font-weight: bold;
@@ -242,9 +258,10 @@ li>a {
     margin-top: 10px;
 }
 
-.begin-container > p {
+.begin-container>p {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .general-container {
@@ -257,10 +274,10 @@ li>a {
     width: 350px;
     flex-grow: 1;
     margin-left: 5%;
-    text-align: center; 
+    text-align: center;
     justify-content: space-around;
     margin-top: 10px;
-}   
+}
 
 .last-container {
     display: flex;
@@ -277,14 +294,14 @@ li>a {
     align-self: center;
 }
 
-.last-paragraph {  
-  width: 100%;
+.last-paragraph {
+    width: 100%;
 }
 
 .last-div {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 70%;
     text-align: center;
     justify-content: space-around;
     margin-top: 15px;
@@ -296,7 +313,7 @@ li>a {
     align-items: center;
     text-align: center;
     list-style-position: inside;
-    width: 350px;
+    width: 300px;
     margin: auto;
 }
 
@@ -305,7 +322,3 @@ li>a {
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-
-    
-
