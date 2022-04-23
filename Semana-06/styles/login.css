@@ -1,0 +1,54 @@
+* {
+    font-family: "Sofia", sans-serif;
+}
+
+.menu {
+    margin-left: 300px;
+}
+.sign-in {
+    border: 2px solid black;
+    border-radius: 149px;
+    margin-left: 500px;
+    width: 432px;
+    height: 700px;
+    border-color: black;
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+}
+
+.sign-in h2 {
+    margin-top: 78px;
+}
+
+.input {
+    margin-top: 50px;
+    width: 327px;
+    height: 37px;
+    border: none;
+    border-bottom: 3px solid orange;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: #AACE9B;
+    color: white;
+}
+
+.remember-me {
+    margin-top: 30px;
+}
+
+button {
+    background-color: #AACE9B;
+    color: white;
+    width: 327px;
+    height: 48px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.password-forgot {
+    margin-top: 30px;
+}
