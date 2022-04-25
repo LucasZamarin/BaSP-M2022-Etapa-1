@@ -21,6 +21,10 @@ main {
     justify-content: center;
 }
 
+.menu {
+    margin-left: 300px;
+}
+
 .h1 {
     text-align: center;
 }
