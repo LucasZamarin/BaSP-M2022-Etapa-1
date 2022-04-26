@@ -43,6 +43,9 @@ function blurPasswordValidation(){
 
         b.firstElementChild.textContent='This password format is invalid';
     }
+    else if (validate1 = true){
+        pass.style.backgroundColor='#32CD32';
+    }
 }
 
 function focusPasswordValidation(){
