@@ -35,7 +35,7 @@ main {
     /* margin-left: 500px;
     margin-right: 400px; */
     width: 750px;
-    height: 720px;
+    height: 770px;
     display: inline-block;
 }
 
@@ -47,7 +47,7 @@ main {
     column-width: px;
 }
 
-.button {
+#button {
     justify-content: center;
     margin-left: 30%;
 }
@@ -81,6 +81,10 @@ main {
         width: 475px;
         height: 1440px;
         display: inline-block;
+    }
+
+    .menu {
+        margin-left: 0px;
     }
 
 }
