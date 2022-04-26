@@ -28,11 +28,22 @@ The css styling was made in Visual Studio Code following the async material prov
 
 ## Week 05
 
-This project is part of the weekly assignment #4 of the BaSP-2022 course. It consists of solving a series of Javascript exercises. We also have to fix the things that were wrong with our design of the webpage made in CSS.
+This project is part of the weekly assignment #5 of the BaSP-2022 course. It consists of solving a series of Javascript exercises. We also have to fix the things that were wrong with our design of the webpage made in CSS.
 
 The following is the link to the index.html file of the webpage designed in week 04: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html 
 
 The following is the link to the index.html file of the Javascript exercises of the week 05: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
+## Week 06
+
+This project is part of the weekly assignment #6 of the BaSP-2022 course. It consists of the making of functional screens made in HTML, CSS and Javascript that emulate a landing (home) webpage, the sign-up for new employees of the site and the login for existing users. We had to work with the three languages previously mentioned, while learning how to manipulate the Javascript DOM and its events to make it fully functional and responsive to inputs.
+
+The following is the link to the index.html (landing page): https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
+
+The following is the link to the login page: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-06/views/login.html
+
+The following is the link to the sign-up page: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-06/views/employee-signup.html
+
 
 ## Contact info
 
