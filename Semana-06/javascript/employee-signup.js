@@ -124,9 +124,11 @@ function postalCodeValidation(e) {
     if (e.target.value.match(numericRegex) && e.target.value.length >= 4 && e.target.value.length <= 5) {
         e.target.style.borderColor = '#0F0';
         b.textContent = '';
+        return true;
     } else {
         e.target.style.borderColor = '#F00';
         b.textContent = 'Invalid number of characters';
+        return false;
     }
 }
 
@@ -167,25 +169,15 @@ function passRepeatValidation(e) {
 }
 
 firstname.addEventListener('focus', focusFirstName);
-
 lastname.addEventListener('focus', focusLastName);
-
 dni.addEventListener('focus', focusDni);
-
 birthdate.addEventListener('focus', focusBirthdate);
-
 phonenumber.addEventListener('focus', focusPhone);
-
 adress.addEventListener('focus', focusAdress);
-
 location1.addEventListener('focus', focusLocation);
-
 postalcode.addEventListener('focus', focusPostalCode);
-
 email.addEventListener('focus', focusEmail);
-
 pass.addEventListener('focus', focusPass);
-
 passrepeat.addEventListener('focus', focusPassRepeat);
 
 function focusFirstName() {
@@ -258,21 +250,16 @@ function signupsubmit(event) {
     var formEmail = form.get('email');
     var formPassword = form.get('pass');
     var formRepeatPass = form.get('passrepeat');
-    console.log(form, !formFirstName);
-    console.log(form, formLastName);
-    console.log(form, formdni);
 
-    if (formFirstName.match(nameRegex) && formdni.match(numericRegex) && formbirthday && formtel.match(numericRegex) && formadress.match(adressRegex) && formlocation.match(locationRegex) && formcp.match(numericRegex) && formEmail.match(emailRegex) && formPassword.match(passwordRegex) && formRepeatPass === formPassword) {
+    if (formFirstName.match(nameRegex) && formdni.match(numericRegex) && formbirthday && formtel.match(numericRegex) && formadress.match(adressRegex)
+        && formlocation.match(locationRegex) && formcp.match(numericRegex) && formEmail.match(emailRegex) && formPassword.match(passwordRegex)
+        && formRepeatPass === formPassword) {
         window.alert('Full name: ' + formFirstName + ' ' + formLastName + '\n' + 'DNI: ' + formdni + '\n' + 'Birth date: ' + formbirthday + '\n' +
             'Phone number: ' + formtel + '\n' + 'Adress: ' + formadress + '\n' + 'Location: ' + formlocation + '\n' +
             'Postal code: ' + formcp + '\n' + 'Email: ' + formEmail + '\n' + 'Password: ' + formPassword + '\n' +
             'Confirm password: ' + formRepeatPass);
-        // } else if (!(formFirstName.match(nameRegex)) && formdni.match(numericRegex) && formbirthday && formtel.match(numericRegex) && formadress.match(adressRegex) && formlocation.match(locationRegex) && formcp.match(numericRegex) && formEmail.match(emailRegex) && formPassword.match(passwordRegex) && formRepeatPass === formPassword) {
-        //     window.alert('Full name: ' + formFirstName + ' ' + formLastName + '\n' + 'DNI is wrong' + formdni + '\n' + 'Birth date: ' + formbirthday + '\n' +
-        //         'Phone number: ' + formtel + '\n' + 'Adress: ' + formadress + '\n' + 'Location: ' + formlocation + '\n' +
-        //         'Postal code: ' + formcp + '\n' + 'Email: ' + formEmail + '\n' + 'Password: ' + formPassword + '\n' +
-        //         'Confirmed password: ' + formRepeatPass);
     } else {
         window.alert('One or more inputs are wrong, please try again.');
     }
 }
+
