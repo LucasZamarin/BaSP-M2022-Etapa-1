@@ -22,16 +22,16 @@ function blurEmailValidation(){
     if (!validate){
         var b = document.getElementById('email-div');
         b.firstElementChild.textContent='This email format is invalid';
-        email.style.backgroundColor='#fa8072';
+        email.style.borderColor='#F00';
     }
     else {
-        email.style.backgroundColor='#32CD32';
+        email.style.borderColor='#0F0';
     }
 }
 
 function focusEmailValidation(){
     var b = document.getElementById('email-div');
-    email.style.backgroundColor='#FFF';
+    email.style.borderColor='#FFF';
     b.firstElementChild.textContent='';
 }
 
@@ -40,18 +40,18 @@ function blurPasswordValidation(){
 
     if (!validate1){
         let b = document.getElementById('pass-div');
-
+        pass.style.borderColor = '#F00'
         b.firstElementChild.textContent='This password format is invalid';
     }
     else if (validate1 = true){
-        pass.style.backgroundColor='#32CD32';
+        pass.style.borderColor = '#0F0';
     }
 }
 
 function focusPasswordValidation(){
     var b = document.getElementById('pass-div');
 
-    b.firstElementChild.textContent='';
+    b.firstElementChild.textContent = '';
 }
 
 function validateEmail(){
