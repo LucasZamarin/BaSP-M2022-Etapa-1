@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sidebar.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="https://kit.fontawesome.com/5c447739a7.js" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://fonts.google.com/specimen/Roboto"> -->
+
+    <title>Login.html</title>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="div-1">
+            <p class="sidebar-head">Menu</p>
+            <nav>
+                <div class="div-aside">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="div-aside">
+                    <a href="employee-signup.html">Sign Up</a>
+                </div>
+                <div class="div-aside">
+                    <a href="#">Login</a>
+                </div>
+            </nav>
+        </div>
+        <div>
+            <p class="sidebar-head-touch">Get in touch</p>
+            <p class="sidebar-text-lorem">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <div class="sidebar-text">
+                <i class="fa-solid fa-envelope"></i>
+                informacion@gmail.com
+            </div>
+            <div class="sidebar-text">
+                <i class="fa-solid fa-phone-volume"></i>
+                (0341) 123-4567
+            </div>
+            <div class="sidebar-text">
+                <i class="fa-solid fa-location-dot"></i>
+                Mendoza 1234, Rosario, Argentina
+            </div>
+        </div>
+    </aside>
+    <header>
+        <div class="container-title">
+            <img class="menu" width=30px height=30px src="../assets/images/menu.png">
+        </div>
+        <div class="title-header">
+            <h1>Trackgenix</h1>
+        </div>
+        <nav>
+            <ul class="top-header">
+                <li class="images-top">
+                    <img src="../assets/images/linkedin-log.png">
+                </li>
+                <li class="images-top">
+                    <img src="../assets/images/Twitter-logo.png">
+                </li>
+                <li class="images-top">
+                    <img src="../assets/images/facebook-logo-3-1.png">
+                </li>
+                <li class="images-top">
+                    <img src="../assets/images/instagram-logo.png">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr id="green-bar" class="green-bar">
+    <main>
+        <form class="sign-in">
+            <div>
+                <h2>Sign In</h2>
+            </div>
+            <div>
+                <input class="input" type="text" id="email" name="Email" placeholder="Email">
+            </div>
+            <div id="email-div">
+                <p></p>
+            </div>
+            <div>
+                <input class="input" type="password" id="pass" name="Password" placeholder="Password">
+            </div>
+            <div id="pass-div">
+                <p></p>
+            </div>
+
+            <div class="remember-me"><input class="checkbox" type="checkbox" value="first_checkbox">Remember me</div>
+            <div><button type= "submit" id="login">Continue</button></div>
+            <button type="button" id="new-user">New User</button>
+            <div class="password-forgot">
+                <p>Forgot your password?</p>
+                <a href="#">Reset it</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <hr class="green-bar">
+        <img src="../assets/images/linkedin-log.png">
+        <img src="../assets/images/Twitter-logo.png">
+        <img src="../assets/images/facebook-logo-3-1.png">
+        <img src="../assets/images/instagram-logo.png">
+
+        <h5>Rosario, Argentina</h5>
+
+        <h5>Copyright © 2022 Trackgenix SA. All rights reserved.
+        </h5>
+    </footer>
+</body>
+
+<script src="../javascript/login.js"></script>
+
+</html>
