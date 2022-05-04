@@ -45,12 +45,24 @@ main {
     column-width: px;
 }
 
+footer {
+    border-top: 6px solid #AACE9B;
+    margin-top: 50px;
+}
+
+.footer-container{
+    margin-top: 35px;
+}
+
+.green-bar {
+    border-bottom: 6px solid #AACE9B;
+    margin-bottom: 30px;
+}
+
 #button {
     justify-content: center;
     margin-left: 30%;
 }
-
-
 
 @media (max-width: 1440px){
     aside{
