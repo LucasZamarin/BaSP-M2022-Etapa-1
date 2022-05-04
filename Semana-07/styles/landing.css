@@ -322,3 +322,10 @@ li>a {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+@media (min-width: 1440px) {
+
+    .green-bar {
+        margin-left: 0px;
+    }
+}
