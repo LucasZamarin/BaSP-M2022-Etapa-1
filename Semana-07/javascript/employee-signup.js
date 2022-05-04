@@ -1,7 +1,3 @@
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", 'ñ', "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var specialCharacters = ['+', '-', '_', '@', '*'];
-
 var firstName = document.getElementById('firstname');
 var lastName = document.getElementById('lastname');
 var dni = document.getElementById('dni');
@@ -13,20 +9,9 @@ var postalCode = document.getElementById('postalcode');
 var email = document.getElementById('email');
 var pass = document.getElementById('pass');
 var passRepeat = document.getElementById('passrepeat');
-var create = document.getElementById('button');
-var signup = document.getElementById('signup');
+var signup = document.getElementById('signup-button');
 
-var fnB = false, lnB = false, dniB = false, bdateB = false, pnumberB = false,
-    addressB = false, cityB = false, emailB = false, pcodeB = false, passB = false, rpassB = false;
-
-var newline = '\r\n';
-
-var emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-// var passwordRegex = /^[a-zA-Z0-9]+$/;
-// var nameRegex = /^(?![\s.]+$)[a-zA-Z\s.]*$/;
-// var numericRegex = /^[0-9-.]+$/;
-// var adressRegex = /^(?![\s.]+$)[a-zA-Z0-9\s.]*$/;
-// var locationRegex = /[A-Za-z0-9? ,_-]/;
+var invalidChars = ['-', '+', 'e', '.']
 
 firstName.addEventListener('blur', firstNameValidation);
 lastname.addEventListener('blur', lastNameValidation);
@@ -39,7 +24,6 @@ postalcode.addEventListener('blur', postalCodeValidation);
 email.addEventListener('blur', emailValidation);
 pass.addEventListener('blur', passValidation);
 passrepeat.addEventListener('blur', passRepeatValidation);
-
 
 // FIRST NAME VALIDATION
 
@@ -69,6 +53,7 @@ function firstNameValidation(e) {
         b.textContent = 'Insufficient characters';
     }
 }
+
 // LAST NAME VALIDATION
 
 function lastNameValidation(e) {
@@ -81,7 +66,6 @@ function lastNameValidation(e) {
         b.textContent = 'Insufficient characters';
     }
 }
-
 
 // DNI VALIDATION
 function validateDni() {
@@ -100,6 +84,12 @@ function validateDni() {
     return advert;
 }
 
+dni.addEventListener('keydown', function (e) {
+    if (invalidChars.includes(e.key)) {
+        e.preventDefault();
+    }
+})
+
 function dniValidation(e) {
     e.preventDefault();
     var b = document.getElementById('dni-div');
@@ -113,27 +103,40 @@ function dniValidation(e) {
 }
 
 
-//BIRTHDAY VALIDATION
-
-var formatBirthdate = "";
-
-function formatDate(date) {
-    var date2 = date.split('-');
-    return date2[1] + "/" + date[2] + "/" + date2[0];
-}
+//BIRTHDATE VALIDATION
 
 function validateBirthdate() {
-    if (new Date(formatDate(birthdate.value)).getTime() > new Date().getTime()) {
+    var bdayValidate = birthdate.value;
+    var day = bdayValidate.substring(3, 5);
+    var month = bdayValidate.substring(0, 2);
+    var year = bdayValidate.substring(6, 10);
+
+    if (bdayValidate.length !== 10 || bdayValidate.substring(2, 3) !== '/' || bdayValidate.substring(5, 6) !== '/'
+        || day <= 00 || day > 31 || month <= 00 || month > 12 || year <= 1910 || year > 2004) {
         return false;
-    } else {
-        formatBirthdate = formatDate(birthdate.value);
+    }
+    else {
         return true;
     }
 }
 
+birthdate.addEventListener('keydown', function (e) {
+    if (invalidChars.includes(e.key)) {
+        e.preventDefault();
+    }
+})
+
+var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", 'ñ', "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+birthdate.addEventListener('keydown', function (e) {
+    if (letters.includes(e.key)) {
+        e.preventDefault();
+    }
+})
+
 function birthdateValidation(e) {
     e.preventDefault();
-    var b = document.getElementById('birthday-div');
+    var b = document.getElementById('birthdate-div');
     if (validateBirthdate()) {
         e.target.style.borderColor = '#0F0';
         b.textContent = '';
@@ -161,6 +164,12 @@ function validatePhone() {
     return advert;
 }
 
+phoneNumber.addEventListener('keydown', function (e) {
+    if (invalidChars.includes(e.key)) {
+        e.preventDefault();
+    }
+})
+
 function phoneValidation(e) {
     e.preventDefault();
     var b = document.getElementById('phonenumber-div');
@@ -180,7 +189,7 @@ function validateAdress() {
     indexSpace = adress.value.lastIndexOf(" ");
     if (adress.value.length > 4) {
         if (indexSpace > 0) {
-            if (!isNaN(adress.value.slice(indexSpace))) {
+            if (isNaN(adress.value.slice(indexSpace))) {
                 return true;
             }
             else {
@@ -197,7 +206,6 @@ function validateAdress() {
 }
 
 function adressValidation(e) {
-
     var b = document.getElementById('adress-div');
     if (!validateAdress()) {
         e.target.style.borderColor = '#0F0';
@@ -249,6 +257,12 @@ function validatePostalCode() {
     return advert;
 }
 
+postalCode.addEventListener('keydown', function (e) {
+    if (invalidChars.includes(e.key)) {
+        e.preventDefault();
+    }
+})
+
 function postalCodeValidation(e) {
     e.preventDefault();
     var b = document.getElementById('postalcode-div');
@@ -288,6 +302,7 @@ function emailValidation(e) {
 }
 
 //PASSWORD AND REPEAT PASSWORD VALIDATION
+
 function validatePassword(pass) {
     var letters = 0;
     var numbers = 0;
@@ -331,6 +346,7 @@ function passRepeatValidation(e) {
         b.textContent = 'Invalid data input';
     }
 }
+
 firstName.addEventListener('focus', focusFirstName);
 
 function focusFirstName() {
@@ -355,7 +371,7 @@ function focusDni() {
 birthdate.addEventListener('focus', focusBirthdate);
 
 function focusBirthdate() {
-    var b = document.getElementById('birthday-div');
+    var b = document.getElementById('birthdate-div');
     b.textContent = '';
 }
 
@@ -393,6 +409,7 @@ function focusEmail() {
     var b = document.getElementById('email-div');
     b.textContent = '';
 }
+
 pass.addEventListener('focus', focusPass);
 
 function focusPass() {
@@ -406,40 +423,29 @@ function focusPassRepeat() {
     b.textContent = '';
 }
 
-
-
 //ALL VALIDATION
 
 function validateAll() {
     return (validateName(firstName.value) &&
         validateName(lastName.value) &&
-        validateDni(dni.value) && validateBirthdate(birthdate.value) &&
-        validatePhone(phoneNumber.value) && validateAdress(adress.value) &&
-        validateLocation(location1.value) && validatePostalCode(postalCode.value) &&
-        validateEmail(email.value) &&
+        validateDni() && validateBirthdate() &&
+        validatePhone() && validateAdress() &&
+        validateLocation() && validatePostalCode() &&
+        validateEmail() &&
         validatePassword(pass.value) &&
         validatePassword(passRepeat.value) &&
-        passRepeat.value === pass.value)
+        (passRepeat.value === pass.value))
 }
 
-// function validateAll() {
-//         return (firstNameValidation(firstName.value) &&
-//             lastNameValidation(lastName.value) &&
-//             dniValidation() && birthdateValidation() &&
-//             phoneValidation() && adressValidation() &&
-//             locationValidation() && postalCodeValidation() &&
-//             emailValidation() &&
-//             passValidation(pass.value) &&
-//             passRepeatValidation(passRepeat.value) &&
-//             passRepeat.value === pass.value)
+// SIGNUP EVENT
 
-signup.addEventListener('submit', signUpSubmit);
+signup.addEventListener('click', signUpSubmit);
 
 function signUpSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
     var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}
-&lastName=${lastName.value}&dni=${dni.value}&birthdate=${formatBirthdate}&phone=${phoneNumber.value}
-&adress=${adress.value}&location=${location1.value}&zip=${postalCode.value}&email=${email.value}
+&lastName=${lastName.value}&dni=${dni.value}&dob=${birthdate.value}&phone=${phoneNumber.value}
+&address=${adress.value}&city=${location1.value}&zip=${postalCode.value}&email=${email.value}
 &password=${pass.value}`
     if (!validateName(firstName.value)) {
         alert(firstName.value + ": Incorrect first name format");
@@ -465,41 +471,45 @@ function signUpSubmit(e) {
         alert(passRepeat.value + ": Repeated password incorrect");
     } else if (passRepeat.value !== pass.value) {
         alert(pass.value + ": The passwords do not match");
-    } else if (validateAll()) {
+    } else {
         fetch(url)
             .then(function (response) {
                 return response.json()
             })
             .then((response) => {
                 if (response.success) {
-                    console.log("entra then", response.msg);
+                    console.log("Entra", response.msg);
                     alert(`${response.msg}
               Employee ID: ${response.data.id}
-              First Name: ${response.data.firstName}
+              First Name: ${response.data.name}
               Last Name: ${response.data.lastName}
               DNI: ${response.data.dni}
-              Birthdate: ${response.data.birthdate}
-              Phone Number: ${response.data.phoneNumber}
-              Adress: ${response.data.adress}
-              Location: ${response.data.location1}
-              Postal Code: ${response.data.postalCode}
+              Birthdate: ${response.data.dob}
+              Phone Number: ${response.data.phone}
+              Adress: ${response.data.address}
+              Location: ${response.data.city}
+              Postal Code: ${response.data.zip}
               Email: ${response.data.email}
-              Password: ${response.data.pass}`);
+              Password: ${response.data.password}`);
                     setLocalStorage();
                 }
                 else {
-                    console.log("entro then error", response.msg);
+                    console.log("It access, and then error", response);
                     alert(response.errors[0].msg);
                 }
             })
             .catch((err) => {
-                console.log("entra catch");
+                console.log("Catch error");
                 alert(err);
             })
     }
 }
 
 //LOCAL STORAGE
+
+if (localStorage.length > 0) {
+    setAttributesStorage();
+}
 
 function setLocalStorage() {
     localStorage.setItem('name', firstName.value)
@@ -512,49 +522,19 @@ function setLocalStorage() {
     localStorage.setItem('postalcode', postalCode.value)
     localStorage.setItem('email', email.value)
     localStorage.setItem('password', pass.value)
-  }
+    localStorage.setItem('passwordrepeat', pass.value)
+}
 
-  function setInput() {
-    firstName.setAttribute('value', localStorage.getItem('firstName'));
+function setAttributesStorage() {
+    firstName.setAttribute('value', localStorage.getItem('name'));
     lastName.setAttribute('value', localStorage.getItem('lastName'));
     dni.setAttribute('value', localStorage.getItem('dni'));
     birthdate.setAttribute('value', localStorage.getItem('birthdate'));
-    phoneNumber.setAttribute('value', localStorage.getItem('phoneNumber'));
-    adress.setAttribute("value", localStorage.getItem('adress'));
-    location1.setAttribute('value', localStorage.getItem('location1'));
-    postalCode.setAttribute('value', localStorage.getItem('postalCode'));
+    phoneNumber.setAttribute('value', localStorage.getItem('phone'));
+    adress.setAttribute('value', localStorage.getItem('adress'));
+    location1.setAttribute('value', localStorage.getItem('location'));
+    postalCode.setAttribute('value', localStorage.getItem('postalcode'));
     email.setAttribute('value', localStorage.getItem('email'));
-    pass.setAttribute('value', localStorage.getItem('pass'));
-    passRepeat.setAttribute('value', localStorage.getItem('passRepeat'));
-  }
-
-
-
-
-// function signupsubmit(event) {
-//     event.preventDefault();
-//     var form = new FormData(signup);
-//     var formFirstName = form.get('firstname');
-//     var formLastName = form.get('lastname');
-//     var formdni = form.get('dni');
-//     var formbirthday = form.get('birthdate');
-//     var formtel = form.get('phonenumber');
-//     var formadress = form.get('adress');
-//     var formlocation = form.get('location1');
-//     var formcp = form.get('postalcode');
-//     var formEmail = form.get('email');
-//     var formPassword = form.get('pass');
-//     var formRepeatPass = form.get('passrepeat');
-
-//     if (formFirstName.match(nameRegex) && formdni.match(numericRegex) && formbirthday && formtel.match(numericRegex) && formadress.match(adressRegex)
-//         && formlocation.match(locationRegex) && formcp.match(numericRegex) && formEmail.match(emailRegex) && formPassword.match(passwordRegex)
-//         && formRepeatPass === formPassword) {
-//         window.alert('Full name: ' + formFirstName + ' ' + formLastName + '\n' + 'DNI: ' + formdni + '\n' + 'Birth date: ' + formbirthday + '\n' +
-//             'Phone number: ' + formtel + '\n' + 'Adress: ' + formadress + '\n' + 'Location: ' + formlocation + '\n' +
-//             'Postal code: ' + formcp + '\n' + 'Email: ' + formEmail + '\n' + 'Password: ' + formPassword + '\n' +
-//             'Confirm password: ' + formRepeatPass);
-//     } else {
-//         window.alert('One or more inputs are wrong, please try again.');
-//     }
-// }
-
+    pass.setAttribute('value', localStorage.getItem('password'));
+    passRepeat.setAttribute('value', localStorage.getItem('passwordrepeat'));
+}
