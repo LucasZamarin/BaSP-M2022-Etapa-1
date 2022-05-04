@@ -34,7 +34,7 @@ button {
     justify-content: center;
     display: inline-block;
     text-align: center;
-    
+
 }
 
 .sign-in h2 {
@@ -65,11 +65,9 @@ button {
 }
 
 
-@media (min-width: 1440px){
-    
-}
+@media (min-width: 1440px) {}
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
     .menu {
         margin-left: 0px;
     }
