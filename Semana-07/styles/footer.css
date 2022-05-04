@@ -4,3 +4,12 @@ footer,
 h5 {
     text-align: center;
 }
+
+footer {
+    border-top: 6px solid #AACE9B;
+    margin-top: 50px;
+}
+
+.footer-container{
+    margin-top: 35px;
+}
