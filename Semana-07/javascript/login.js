@@ -113,20 +113,3 @@ function sendRequest() {
             alert(err);
         })
 }
-
-//     fetch(request)
-//         .then(function (response) {
-//             console.log('aloalo');
-//             return response.json();
-//         })
-//         .then(function (response) {
-//             if (!response.success) {
-//                 throw new Error(response.msg)
-//             }
-//             alert('Request Successful');
-//             alert(response.msg);
-//         })
-//         .catch(error => {
-//             alert('There has been an issue.' + '\n' + error);
-//         })
-// }
