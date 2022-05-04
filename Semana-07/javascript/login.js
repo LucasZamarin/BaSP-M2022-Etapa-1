@@ -1,9 +1,6 @@
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", 'ñ', "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
 var specialCharacters = ['+', '-', '_', '@', '*'];
-
 var emailB = false, passB = false;
 
 var email = document.getElementById('email');
@@ -55,8 +52,8 @@ function validateEmail() {
 }
 
 function blurPasswordValidation() {
-var b = document.getElementById('pass-div');
-if (validatePass(document.getElementById('pass').value)) {
+    var b = document.getElementById('pass-div');
+    if (validatePass(document.getElementById('pass').value)) {
         pass.style.borderColor = '#0F0';
         passB = true;
     }
@@ -67,161 +64,69 @@ if (validatePass(document.getElementById('pass').value)) {
     }
 }
 
-function validatePass(validation) {
-    var abcB = false;
-    var numB = false;
-    for (var i = 0; i < validation.length; i++) {
-        for (let j = 0; j < specialCharacters.length; j++) {
-            if (validation[i] == specialCharacters[j]) {
-                return false;
-            }
-        }
-    }
-    for (var i = 0; i < validation.length; i++) {
-        if (!numB) {
-            for (let j = 0; j < num.length; j++) {
-                if (validation[i] == num[j]) {
-                    numB = true;
-                    break;
-                }
-            }
-        }
-        if (!abcB) {
-            for (let j = 0; j < letters.length; j++) {
-                if (validation[i] == letters[j]) {
-                    abcB = true;
-                    break;
-                }
-            }
-        }
-        if (numB && abcB) {
-            break;
-        }
-    }
-    if (numB && abcB) {
-        return true;
-    }
-    else {
+function validatePass(pass) {
+    var letters = 0;
+    var numbers = 0;
+    if (pass.length < 7) {
         return false;
+    } else {
+        for (i = 0; i < pass.length; i++) {
+            if (isNaN(pass[i])) {
+                letters += 1;
+            } else {
+                numbers += 1;
+            }
+        }
     }
+    return (letters !== 0 && numbers !== 0)
 }
 
 function loginClick(e) {
-    var message = 'The data is ';
-    var newline = '\r\n';
-    if (!emailB && passB) {
-        message += 'correct. Login successful.';
-        alert(message);
-        alert('Username: ' + email.value + 'Password: ' + password.value );
-        sendRequest();
+    e.preventDefault();
+    if (emailB) {
+        alert('Wrong email input, please try again.');
     }
-    else {
-        message += 'incorrect. Please check the following items: '
-        if (emailB) {
-            message += newline + 'User email: Please enter a valid email.'
-        }
-        if (!passB) {
-            message += newline + 'Password: Please enter a valid password. It should only contain' +
-                ' letters and numbers';
-        }
-        alert(message);
+    else if (!passB) {
+        alert('Wrong password input, please try again.');
+    } else {
+        sendRequest();
     }
 }
 
-function sendRequest() 
-{
-    const usp = new URLSearchParams (
-        {
-            email : email.value,
-            password : pass.value
-        }
-    );
-
-    const request = 'https://basp-m2022-api-rest-server.herokuapp.com/login?'+ usp;
-    
+function sendRequest() {
+    const request = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${pass.value}`;
     fetch(request)
         .then(function (response) {
-           
-            return response.json();
+            return response.json()
         })
-        .then(function (response) {
-            if(!response.success){
-                throw new Error (response.msg)
+        .then((response) => {
+            if (response.success) {
+                console.log("Successful request!", response.msg);
+                alert('Employee successfully logged in.');
+
+            } else {
+                console.log("It won't access, you're not the user.", response);
+                alert('You cannot access, you are not the correct user.');
             }
-            alert('Request Succesful');
-            alert(response.msg);
         })
-        .catch(error=> {
-          alert('There has been a problem.' + '\n' +  error);
+        .catch((err) => {
+            alert(err);
         })
-    }
-
-// function sendRequest() {
-//     const usp = new URLSearchParams(
-//         {
-//             email: email.value,
-//             password: pass.value
-//         }
-//     );
-
-//     const url = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + usp;
-//     fetch(url)
-//         .then(function (response) {
-//             return response.json()
-//         })
-//         .then(function (response) {
-//             alert(response.msg)
-//         })
-//         .catch(function (responseError) {
-//             alert(responseError.errors[0].msg)
-//         })
-// }
-
-
-
-// function loginClick(e) {
-//     var a = validateEmail();
-//     var b = validatePass();
-//     var emailData = email.value;
-//     var passwordData = pass.value;
-//     if (validateEmail() && validatePass()) {
-//         window.alert('Email: ' + emailData + '\n' + 'Password: ' + passwordData);
-//         // sendRequest();
-//     }
-//     else if (!validateEmail() && validatePass()) {
-//         window.alert('Invalid email.');
-//     }
-//     else if (validateEmail() && !validatePass()) {
-//         window.alert('Invalid password.');
-//     }
-//     else {
-//         window.alert('Email and password are invalid, incorrect format.');
-//     }
-// }
-
-
-// function sendRequest() {
-//     var usp = new URLSearchParams(
-//         {
-//             email: email.value,
-//             password: pass.value
-//         }
-//     );
-
-//     var request = 'https://basp-m2022-api-rest-server.herokuapp.com/login?' + usp;
+}
 
 //     fetch(request)
 //         .then(function (response) {
+//             console.log('aloalo');
 //             return response.json();
 //         })
-//         .then(function (responseJson) {
-//             if (responseJson.success) {
-//                 alert('Request successful\n' + responseJson.msg);
-//             } else {
-//                 alert('Error\n' + responseJson.msg);
+//         .then(function (response) {
+//             if (!response.success) {
+//                 throw new Error(response.msg)
 //             }
+//             alert('Request Successful');
+//             alert(response.msg);
 //         })
-//         .catch(function (error) {
-//             console.log(error);
-//         });
+//         .catch(error => {
+//             alert('There has been an issue.' + '\n' + error);
+//         })
 // }
