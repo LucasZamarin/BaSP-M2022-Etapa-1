@@ -44,6 +44,15 @@ The following is the link to the login page: https://lucaszamarin.github.io/BaSP
 
 The following is the link to the sign-up page: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-06/views/employee-signup.html
 
+## Week 07
+
+This project is part of the weekly assignment #7 of the BaSP-2022 course. It consists on the making both the sign-up and login pages made in the sixth assignment functional by connecting them to a server, by making use of web APIs. 
+
+The following is the link to the index.html (landing page): https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-07/views/index.html
+
+The following is the link to the login page: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-07/views/login.html
+
+The following is the link to the sign-up page: https://lucaszamarin.github.io/BaSP-M2022-Etapa-1/Semana-07/views/employee-signup.html
 
 ## Contact info
 
