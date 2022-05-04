@@ -1,7 +1,7 @@
 aside {
     color: black;
-    /* display: none;  */
-    position: absolute; 
+    display: none;
+    /* position: absolute;  */
     width: 308px;
 }
 
@@ -51,4 +51,15 @@ div-1 {
 
 i {
     color: #AACE9B;
+}
+
+@media (min-width: 1440px) {
+    aside {
+        display: block;
+        position: absolute;
+    }
+
+    .green-bar {
+        margin-left: 330px;
+    }
 }
